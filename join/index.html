@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>You're invited — Counterpart Business</title>
+  <meta name="description" content="A business invited you to connect on Counterpart Business, an app for messaging, invoices and meetings between businesses.">
+  <link rel="icon" href="../icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:opsz,wght@6..72,600&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .invite { text-align: center; padding: 40px 0 10px; }
+    .invite img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(15, 107, 99, .25); }
+    .code { font: 700 40px/1 ui-monospace, "SF Mono", Menlo, monospace; letter-spacing: .25em; margin: 18px 0 6px; padding-left: .25em; }
+    .open { display: inline-block; margin-top: 22px; padding: 14px 28px; border-radius: 999px; background: var(--teal); color: #fff; font-weight: 600; text-decoration: none; }
+    .copy { margin-top: 12px; background: none; border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; font: inherit; color: var(--ink); cursor: pointer; }
+    .steps { text-align: left; max-width: 460px; margin: 36px auto 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="../"><img src="../icon.png" alt="">Counterpart Business</a>
+      <nav><a href="../#support">Support</a><a href="../privacy.html">Privacy</a></nav>
+    </header>
+
+    <section class="invite">
+      <img src="../icon.png" alt="Counterpart Business app icon">
+      <h1 style="margin-top:22px">You're invited to connect</h1>
+      <p class="lede" style="margin:0 auto">A business wants to message, invoice and schedule with you on Counterpart Business.</p>
+      <div id="has-code" hidden>
+        <p class="muted" style="margin-top:28px">Your invite code</p>
+        <div class="code" id="code"></div>
+        <a class="open" id="open" href="#">Open in Counterpart</a><br>
+        <button class="copy" id="copy" type="button">Copy code</button>
+      </div>
+      <p id="no-code" class="muted" style="margin-top:28px" hidden>This link is missing its invite code. Ask the business that invited you to send it again.</p>
+    </section>
+
+    <div class="card steps">
+      <h3>Don't have the app yet?</h3>
+      <p>Counterpart Business is in beta on iPhone. Ask the business that invited you to add you as a TestFlight tester, install it, then come back and tap <strong>Open in Counterpart</strong>, or enter the code above under <strong>Businesses → +</strong>.</p>
+    </div>
+
+    <footer>
+      <span>© 2026 Counterpart Business</span>
+      <span><a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Service</a></span>
+    </footer>
+  </div>
+  <script>
+    const code = (new URLSearchParams(location.search).get('code') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6);
+    if (code.length === 6) {
+      document.getElementById('has-code').hidden = false;
+      document.getElementById('code').textContent = code;
+      document.getElementById('open').href = 'counterpart://connect?code=' + code;
+      document.getElementById('copy').addEventListener('click', async (e) => {
+        try { await navigator.clipboard.writeText(code); e.target.textContent = 'Copied'; } catch { e.target.textContent = code; }
+      });
+    } else {
+      document.getElementById('no-code').hidden = false;
+    }
+  </script>
+</body>
+</html>
