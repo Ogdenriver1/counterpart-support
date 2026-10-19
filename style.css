@@ -47,3 +47,4 @@ footer a { color: var(--muted); }
   .features { grid-template-columns: 1fr; }
   nav a { margin-left: 12px; }
 }
+.eyebrow { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin: 0 0 8px; }
