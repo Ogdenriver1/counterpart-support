@@ -1,0 +1,10 @@
+{
+  "name": "Counterpart Business",
+  "short_name": "Counterpart",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f4ee",
+  "theme_color": "#0f6b63",
+  "icons": [{ "src": "icon.png", "sizes": "256x256", "type": "image/png" }]
+}

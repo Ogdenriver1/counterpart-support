@@ -5,62 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Counterpart Business — message, invoice and schedule with other businesses</title>
   <meta name="description" content="Counterpart Business is an iPhone app for messaging the businesses you work with, sending invoices and proposals, and scheduling meetings they can see.">
+  <meta name="theme-color" content="#0f6b63">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Counterpart">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:opsz,wght@6..72,600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="wrap">
-    <header class="top">
-      <a class="brand" href="./"><img src="icon.png" alt="">Counterpart Business</a>
-      <nav><a href="#support">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
-    </header>
+<body class="home">
+  <header class="hero-band">
+    <div class="wrap">
+      <div class="top">
+        <a class="brand" href="./"><img src="icon.png" alt="">Counterpart</a>
+        <nav><a href="#help">Help</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+      </div>
 
-    <section class="hero">
-      <img src="icon.png" alt="Counterpart Business app icon">
-      <div>
-        <p class="eyebrow">Counterpart Business</p>
-        <h1>Work with other businesses, in one place.</h1>
-        <p class="lede">Counterpart Business is an iPhone app for small businesses to message the businesses they work with, send invoices and proposals, and book meetings both sides can see.</p>
-        <span class="badge">iPhone · Coming soon to the App Store</span>
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Counterpart Business · for iPhone</p>
+          <h1>Every business you work with, in your pocket.</h1>
+          <p class="lede">Message the businesses you work with, send invoices and proposals, and book meetings both of you can see. All from one app on your phone.</p>
+          <span class="store">Coming soon to the App Store</span>
+        </div>
+
+        <div class="phone" aria-hidden="true">
+          <div class="screen">
+            <div class="s-bar">
+              <span class="s-title">Home</span>
+            </div>
+            <div class="s-head">
+              <span class="s-small">Owed to you</span>
+              <span class="s-big">$4,250</span>
+              <span class="s-chip">2 invoices due this week</span>
+            </div>
+            <div class="s-body">
+              <div class="s-card">
+                <span class="s-av" style="background:#e9b44c">B</span>
+                <div><b>Bluebird Café</b><small>Invoice #1042 paid · $820</small></div>
+              </div>
+              <div class="s-card">
+                <span class="s-av" style="background:#6d8fd6">N</span>
+                <div><b>Northside Print Co.</b><small>Meeting Thu 10:00 AM</small></div>
+              </div>
+              <div class="s-card">
+                <span class="s-av" style="background:#d77a61">H</span>
+                <div><b>Harbor Studio</b><small>"Proposal looks great!"</small></div>
+              </div>
+            </div>
+            <div class="s-tabs"><i class="on"></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>What Counterpart Business does</h2>
+      <p class="intro">Counterpart Business gives two businesses that work together, like a supplier and a café or a designer and a client, one shared place for their working relationship. Each business signs in, creates a profile, and connects with the other using an invite code. Then they can message, send and track invoices, sign proposals and contracts, and schedule meetings, all inside the app.</p>
+      <div class="features">
+        <div class="feature"><span class="ic">💬</span><h3>One thread per business</h3><p>A private conversation with each business, with photos, files and unread counts.</p></div>
+        <div class="feature"><span class="ic">🧾</span><h3>Invoices that fit how you get paid</h3><p>Line items, discounts and taxes. One payment, deposit and balance, or monthly installments. Share as PDF.</p></div>
+        <div class="feature"><span class="ic">✍️</span><h3>Proposals and contracts</h3><p>They accept with a typed signature, and the invoice is created for them.</p></div>
+        <div class="feature"><span class="ic">📅</span><h3>Meetings they can see</h3><p>Request a time; they accept or decline. Confirmed meetings go into your calendar.</p></div>
+        <div class="feature"><span class="ic">📌</span><h3>Your own pipeline</h3><p>Private notes, tasks and a stage for every business. Only you see them.</p></div>
+        <div class="feature"><span class="ic">📈</span><h3>Reports</h3><p>Money received by month, your top clients and how long it takes to get paid.</p></div>
       </div>
     </section>
 
-    <h2>What Counterpart Business does</h2>
-    <p>Counterpart Business gives two businesses that work together, like a supplier and a café or a designer and a client, one shared place for their working relationship. Each business signs in, creates a profile, and connects with the other by entering an invite code. From then on they can message each other, send and track invoices, send proposals and contracts to sign, and schedule meetings, all inside the app.</p>
+    <section>
+      <h2>How connecting works</h2>
+      <ol class="steps">
+        <li><b>Sign in</b> with Apple or Google and enter your business name.</li>
+        <li><b>Share your code.</b> Send your 6-character invite code to a business you work with, or enter theirs.</li>
+        <li><b>Work together.</b> Everything you share is visible to both of you, and no one else.</li>
+      </ol>
+    </section>
 
-    <h2>What you can do</h2>
-    <div class="features">
-      <div class="card"><h3>One thread per business</h3><p>A private conversation with each business you're connected to, with unread counts.</p></div>
-      <div class="card"><h3>Invoices that fit how you get paid</h3><p>Line items, discounts and taxes, with one payment, a deposit and balance, or monthly installments. Share any invoice as a PDF.</p></div>
-      <div class="card"><h3>Proposals and contracts</h3><p>Send a proposal they accept with a typed signature, and the invoice is created for them. Contracts are signed the same way.</p></div>
-      <div class="card"><h3>Meetings they can see</h3><p>Request a time; they accept or decline. Confirmed meetings go straight into your calendar.</p></div>
-      <div class="card"><h3>Your own pipeline</h3><p>Private notes, tasks and a stage for every business, from Inquiry to Completed. Only you see them.</p></div>
-      <div class="card"><h3>Reports</h3><p>Money received by month, your top clients and how long it takes to get paid.</p></div>
-    </div>
+    <section>
+      <h2>How Counterpart Business uses Google sign-in</h2>
+      <p>You can sign in with Google (or Apple) instead of creating a password. When you do, Counterpart Business receives only your basic Google profile: your name, email address and profile picture. We use them solely to create your account, pre-fill your business profile and keep you signed in. We don't access your Gmail, Google Drive, Calendar, contacts or any other Google data, and we never post anything to your Google account. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    </section>
 
-    <h2>How Counterpart Business uses Google sign-in</h2>
-    <p>You can sign in with Google (or Apple) instead of creating a password. When you do, Counterpart Business receives only your basic Google profile: your name, email address and profile picture. We use them solely to create your account, pre-fill your business profile and keep you signed in. We don't access your Gmail, Google Drive, Calendar, contacts or any other Google data, and we never post anything to your Google account. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <section id="help">
+      <h2>Help</h2>
+      <div class="faq">
+        <details>
+          <summary>How do I connect with a business?</summary>
+          <p>Open the <b>Businesses</b> tab and tap <b>+</b>. Share your invite link or code with them, or type in the 6-character code they sent you.</p>
+        </details>
+        <details>
+          <summary>Can the other business see my notes and tasks?</summary>
+          <p>No. Notes, tasks and pipeline stages are private to you. Messages, invoices, meetings, proposals and contracts are shared with that business.</p>
+        </details>
+        <details>
+          <summary>Does Counterpart take payments?</summary>
+          <p>No. Counterpart never moves money. You record payments on an invoice (cash, bank transfer, card and so on) so both sides can see what's been paid.</p>
+        </details>
+        <details>
+          <summary>Someone is bothering me. What can I do?</summary>
+          <p>Open their page, tap <b>⋯</b>, and choose <b>Report</b> or <b>Block</b>. Blocking disconnects you and stops them connecting again. Reports are reviewed within 24 hours.</p>
+        </details>
+        <details>
+          <summary>How do I delete my account?</summary>
+          <p>In the app, go to <b>Account → Delete account</b>. This permanently deletes your profile, connections, messages, invoices, meetings, documents, notes and tasks.</p>
+        </details>
+      </div>
+    </section>
+  </main>
 
-    <h2>How connecting works</h2>
-    <ol class="steps">
-      <li>Sign in with Apple or Google and enter your business name.</li>
-      <li>Share your 6-character invite code with a business you work with, or enter theirs.</li>
-      <li>Once connected, everything you share with them is visible to both of you, and no one else.</li>
-    </ol>
-
-    <h2 id="support">Support</h2>
-    <div class="card">
-      <p><strong>Found a bug or have a question?</strong> <a href="https://github.com/Ogdenriver1/counterpart-support/issues/new">Open a support request</a> and describe what happened. Include your iPhone model and iOS version if you can. (You'll need a free GitHub account.)</p>
-    </div>
-    <p class="muted" style="margin-top:14px">To delete your account and data, open Counterpart and go to <strong>Account → Delete account</strong>.</p>
-
-    <footer>
-      <span>© 2026 Counterpart Business</span>
-      <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></span>
-    </footer>
-  </div>
+  <footer class="wrap">
+    <span>© 2026 Counterpart Business</span>
+    <span><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></span>
+  </footer>
 </body>
 </html>
